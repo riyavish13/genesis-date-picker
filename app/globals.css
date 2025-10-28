@@ -143,12 +143,14 @@
   border: none;
   color: white;
 }
+
 .rdp-day {
   width: 10px;
   height: 10px;
 }
 .rdp-day_button:hover {
-  background-color: #eaecf0;
+  background-color: var(--primary-400);
+  color: white;
 }
 .rdp-weekday {
   font-size: 14px;
@@ -171,4 +173,13 @@
   color: #98a2b3;
   pointer-events: none;
   user-select: none;
+}
+.rdp-day.rdp-selected.rdp-range_start > .rdp-day_button,
+.rdp-day.rdp-selected.rdp-range_end > .rdp-day_button {
+  color: #fff;
+}
+
+/* Selects the <button> inside the <td> that matches all required classes */
+.rdp-day.rdp-selected.rdp-range_middle .rdp-day_button {
+  color: black !important;
 }

@@ -118,6 +118,5 @@ const config: Config = {
     },
   },
   plugins: [],
-  // prefix: 'agcl-',
 };
 export default config;
