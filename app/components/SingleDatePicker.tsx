@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@atomos_tech/genesis";
-import { RiCalendar2Line } from "@remixicon/react";
+import { RiCalendarLine } from "@remixicon/react";
 import { format } from "date-fns";
 import React, {
   Dispatch,
@@ -25,6 +25,7 @@ interface SingleDatePickerProps {
   hideWeekdays?: boolean;
   endMonth?: Date | undefined;
   startMonth?: Date | undefined;
+  timeZone?: string | undefined;
 }
 
 const SingleDatePicker = ({
@@ -39,6 +40,7 @@ const SingleDatePicker = ({
   hideWeekdays,
   endMonth,
   startMonth,
+  timeZone = "Asia/Kolkata",
 }: SingleDatePickerProps) => {
   const [isPopperOpen, setIsPopperOpen] = useState(false);
   const popperRef = useRef<HTMLDivElement>(null);
@@ -117,7 +119,7 @@ const SingleDatePicker = ({
           value={formatSelectedDate(selectedDate, dateFormat)}
           onClick={() => setIsPopperOpen(true)}
           disabled={disabled}
-          endIcon={<RiCalendar2Line size={18} />}
+          startIcon={<RiCalendarLine size={16} />}
         />
       </div>
       {isPopperOpen && (
@@ -151,6 +153,7 @@ const SingleDatePicker = ({
             disabled={disabledCalendar}
             components={{ Dropdown: CustomSelectDropdown }}
             captionLayout="dropdown"
+            timeZone={timeZone}
             onSelect={handleDaySelect}
             modifiersStyles={{
               selected: {
