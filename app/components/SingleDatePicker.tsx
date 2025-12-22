@@ -80,7 +80,9 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     function CustomSelectDropdown(props: DropdownProps) {
       const { options, value, onChange } = props;
 
-      const handleValueChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+      const handleValueChange = (
+        event: React.ChangeEvent<HTMLSelectElement>
+      ) => {
         if (onChange) onChange(event);
       };
 
@@ -131,7 +133,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div
             tabIndex={-1}
             className={cn(
-              "text-[16px] shadow-sm border bg-white rounded-md",
+              "text-[16px] shadow-sm border border-primary-600 bg-white rounded-md",
               "mt-1 mx-auto z-[1000] transition-all absolute duration-75 delay-100 ease-in-out",
               {
                 "bottom-11 right-0": position === "top-right",
@@ -151,7 +153,9 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               showOutsideDays
               startMonth={startMonth}
               endMonth={
-                endMonth ? endMonth : new Date(new Date().getFullYear() + 100, 12)
+                endMonth
+                  ? endMonth
+                  : new Date(new Date().getFullYear() + 100, 12)
               }
               selected={selectedDate}
               defaultMonth={selectedDate || new Date()}

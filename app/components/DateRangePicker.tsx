@@ -173,7 +173,7 @@ const DateRangePicker = forwardRef<HTMLDivElement, DateRangePickerProps>(
         {isPopperOpen && (
           <div
             className={cn(
-              "shadow-md rounded-md p-3 flex gap-5 justify-center items-start",
+              "shadow-md rounded-md border border-primary-600 p-3 flex gap-5 justify-center items-start",
               "mt-1 h-[330px] absolute bg-white z-[1000] transition-all duration-75 delay-100 ease-in-out",
               position === "top-left" && "bottom-11 left-0",
               position === "top-right" && "bottom-11 right-0",
