@@ -1,14 +1,14 @@
 {
   "name": "@atomos_tech/genesis-datepicker",
   "description": "list of components for your project",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "repository": {
-    "url": "git+https://github.com/atomostechhq/genesis.git"
+    "url": "git+https://github.com/atomostechhq/genesis-date-picker.git"
   },
   "keywords": [
     "component",
@@ -81,7 +81,7 @@
   },
   "author": "riya",
   "bugs": {
-    "url": "https://github.com/atomostechhq/genesis/issues"
+    "url": "https://github.com/atomostechhq/genesis-date-picker/issues"
   },
-  "homepage": "https://github.com/atomostechhq/genesis#readme"
+  "homepage": "https://github.com/atomostechhq/genesis-date-picker#readme"
 }
